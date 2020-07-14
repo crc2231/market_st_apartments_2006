@@ -35,4 +35,11 @@ attr_reader :units
     bougie_unit.renter
   end
 
+  def units_by_number_of_bedrooms
+    rooms = @units.group_by {|unit| unit.bedrooms}
+    # room_num = rooms.each do |room|
+    #   rooms[bedrooms].number
+    # end
+  end
+
 end
