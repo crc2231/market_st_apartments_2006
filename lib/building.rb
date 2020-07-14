@@ -21,4 +21,9 @@ attr_reader :units
     renter_array
   end
 
+  def average_rent
+    total = @units.sum {|unit| unit.monthly_rent}
+    average_rent = total.to_f / @units.count
+  end
+
 end
