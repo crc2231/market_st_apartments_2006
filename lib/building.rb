@@ -30,4 +30,9 @@ attr_reader :units
     @units.find_all {|unit| unit.renter != nil}
   end
 
+  def renter_with_highest_rent
+    bougie_unit = rented_units.max_by {|unit| unit.monthly_rent}
+    bougie_unit.renter
+  end
+
 end
