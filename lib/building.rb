@@ -26,4 +26,8 @@ attr_reader :units
     average_rent = total.to_f / @units.count
   end
 
+  def rented_units
+    @units.find_all {|unit| unit.renter != nil}
+  end
+
 end
